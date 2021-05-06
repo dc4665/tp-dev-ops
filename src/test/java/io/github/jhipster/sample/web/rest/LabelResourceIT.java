@@ -367,7 +367,7 @@ class LabelResourceIT {
         // Initialize the database
         labelRepository.saveAndFlush(label);
 
-        int databaseSizeBeforeDelete = labelRepository.findAll().size();
+        int databaseSizeBeforeDelete = labelRepository.findAll().size(1);
 
         // Delete the label
         restLabelMockMvc
