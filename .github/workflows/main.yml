@@ -44,5 +44,6 @@ jobs:
       - name: Front Unit Test
         run: |
           npm run ci:frontend:test
+          npm run test
           chmod -x mvnw && npm run ci:backend:test
           npm run test
