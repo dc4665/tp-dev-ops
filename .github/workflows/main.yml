@@ -41,3 +41,7 @@ jobs:
           echo 'Install Npm'
 
       # Runs a set of commands using the runners shell
+      - name: Front Unit Test
+        run: |
+          npm run ci:frontend:test
+          npm run test
