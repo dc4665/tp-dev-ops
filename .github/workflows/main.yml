@@ -50,6 +50,8 @@ jobs:
           chmod +x mvnw && npm run ci:backend:test      
           npm run test
       - name: E2E
+        env:
+          JHI_E2E_HEADLESS: process.env.JHI_E2E_HEADLESS
         run: |
           ./mvnw -ntp verify -DskipTests --batch-mode "-Pprod" "-Pe2e" "-Denforcer.skip=true"
           npm run ci:e2e:prepare:docker
